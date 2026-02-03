@@ -1,0 +1,72 @@
+<svg width="800" height="200" viewBox="0 0 800 200"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#38bdf8">
+                <animate attributeName="stop-color" values="#38bdf8;#818cf8;#c084fc;#38bdf8" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stop-color="#2dd4bf">
+                <animate attributeName="stop-color" values="#2dd4bf;#34d399;#22d3ee;#2dd4bf" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&amp;display=swap');
+      .bg { fill: #0f172a; }
+      .text { 
+        font-family: 'JetBrains Mono', monospace; 
+        font-size: 80px; 
+        font-weight: 800;
+        fill: url(#neonGrad); 
+        filter: url(#glow);
+      }
+      .cursor { 
+        fill: #38bdf8; 
+        animation: blink 1s step-end infinite;
+      }
+      .subtext {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 20px;
+        fill: #94a3b8;
+        letter-spacing: 4px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out 0.5s forwards;
+      }
+      .bracket { fill: #475569; }
+      
+      @keyframes blink { 
+        0%, 100% { opacity: 1; } 
+        50% { opacity: 0; } 
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+        </style>
+    </defs>
+
+    <!-- Modern Card Background -->
+    <rect width="100%" height="100%" rx="12" class="bg" />
+
+    <!-- Window Controls -->
+    <circle cx="30" cy="30" r="6" fill="#ef4444" />
+    <circle cx="50" cy="30" r="6" fill="#eab308" />
+    <circle cx="70" cy="30" r="6" fill="#22c55e" />
+
+    <!-- Main Content centered -->
+    <g transform="translate(400, 110)">
+        <text x="0" y="0" text-anchor="middle" class="text">
+            <tspan class="bracket">[</tspan> RUNE <tspan class="bracket">]</tspan>
+            <tspan class="cursor">_</tspan>
+        </text>
+        <text x="0" y="40" text-anchor="middle" class="subtext">
+      TERMINAL EDITOR REIMAGINED
+        </text>
+    </g>
+</svg>
