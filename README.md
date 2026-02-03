@@ -1,5 +1,9 @@
 # RUNE
 
+<p align="center">
+  <img src="assets/logo.svg" alt="RUNE Logo" width="100%">
+</p>
+
 **RUNE** is a next-generation Vim-style editor designed for power users who demand performance, security, and extreme hackability. Built entirely in Rust, RUNE preserves the classic modal editing philosophy while incorporating a modern UX and a secure, Lua-powered expansion system.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
